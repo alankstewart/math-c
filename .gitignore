@@ -1,0 +1,7 @@
+.cproject
+.project
+.settings
+.DS_Store
+*.out
+two_thousand_lines
+Release
