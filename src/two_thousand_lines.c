@@ -51,9 +51,6 @@ void display(void)
     glEnable(GL_LINE_SMOOTH);
     glHint(GL_LINE_SMOOTH, GL_NICEST);
 
-    glEnable(GL_POINT_SMOOTH);
-    glHint(GL_POINT_SMOOTH, GL_NICEST);
-
     glBegin(GL_LINES);
     for (int n = 1; n <= LINES; n++) {
         line = getLine(n);
