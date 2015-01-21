@@ -1,4 +1,4 @@
-CFLAGS = -O3 -Wall -ansi -pedantic
+CFLAGS = -O3 -Wall -Wno-deprecated-declarations -pedantic
 
 default: all
 
@@ -9,7 +9,7 @@ clean:
 
 test:
 	@echo 'Building target: $@'
-	gcc ${CFLAGS} src/two_thousand_lines.c  -framework OpenGL -framework GLUT -o two_thousand_lines
+	clang ${CFLAGS} src/two_thousand_lines.c -framework OpenGL -framework GLUT -o two_thousand_lines
 
 run: test
 	@echo Executing ...

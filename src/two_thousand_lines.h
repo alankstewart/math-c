@@ -3,11 +3,13 @@
 #ifndef SRC_TWO_THOUSAND_LINES_H_
 #define SRC_TWO_THOUSAND_LINES_H_
 
+#include <GLUT/glut.h>
+
 double scale;
 
 typedef struct {
-    double x;
-    double y;
+    GLdouble x;
+    GLdouble y;
 } point;
 
 typedef struct {
