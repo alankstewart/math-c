@@ -7,6 +7,7 @@
 
 #define LINES 2000
 #define SIZE  1024
+#define PI    3.14159265358979323846264338327950288
 
 int main(int argc, char *argv[])
 {
@@ -69,7 +70,7 @@ line getLine(int n)
 point getPoint(int l, int m, int n)
 {
     point p;
-    p.x = pow(sin(l * M_PI * n / LINES), 3) * scale;
-    p.y = pow(cos(m * M_PI * n / LINES), 3) * scale;
+    p.x = pow(sin(l * PI * n / LINES), 3) * scale;
+    p.y = pow(cos(m * PI * n / LINES), 3) * scale;
     return p;
 }
