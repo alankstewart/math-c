@@ -1,4 +1,4 @@
-CFLAGS = -O3 -Wall -Wno-deprecated-declarations -std=c99 -pedantic
+CFLAGS = -O3 -Wall -Wno-deprecated-declarations -std=c90 -pedantic
 
 UNAME := $(shell uname)
 

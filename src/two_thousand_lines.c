@@ -40,6 +40,7 @@ void init2D()
 
 void display()
 {
+    int n;
     line line;
 
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
@@ -52,7 +53,7 @@ void display()
     glHint(GL_LINE_SMOOTH, GL_NICEST);
 
     glBegin(GL_LINES);
-    for (int n = 1; n <= LINES; n++) {
+    for (n = 1; n <= LINES; n++) {
         line = getLine(n);
         glVertex2d(line.p1.x, line.p1.y);
         glVertex2d(line.p2.x, line.p2.y);
