@@ -38,7 +38,7 @@ void init2D()
     gluOrtho2D(left, right, bottom, top);
 }
 
-void display(void)
+void display()
 {
     line line;
 

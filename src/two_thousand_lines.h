@@ -3,7 +3,11 @@
 #ifndef SRC_TWO_THOUSAND_LINES_H_
 #define SRC_TWO_THOUSAND_LINES_H_
 
+#ifdef __APPLE__
 #include <GLUT/glut.h>
+#else
+#include <GL/glut.h>
+#endif
 
 double scale;
 
@@ -18,7 +22,7 @@ typedef struct {
 } line;
 
 void init2D();
-void display(void);
+void display();
 line getLine(int n);
 point getPoint(int l, int m, int n);
 

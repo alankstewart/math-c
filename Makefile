@@ -1,16 +1,25 @@
 CFLAGS = -O3 -Wall -Wno-deprecated-declarations -std=c99 -pedantic
 
+UNAME := $(shell uname)
+
+ifeq ($(UNAME), Linux)
+	LIBS = -lglut -lGLU -lGL -lm
+endif
+ifeq ($(UNAME), Darwin)
+	LIBS = -framework OpenGL -framework GLUT -lm
+endif
+
 default: all
 
-all: test
+all: math
 
 clean:
-	rm -f test 
+	rm -f two_thousand_lines 
 
-test:
+math:
 	@echo 'Building target: $@'
-	gcc ${CFLAGS} src/two_thousand_lines.c -lm -framework OpenGL -framework GLUT -o two_thousand_lines
+	gcc -o two_thousand_lines src/two_thousand_lines.c ${CFLAGS} ${LIBS} 
 
-run: test
+run: math
 	@echo Executing ...
 	./two_thousand_lines
