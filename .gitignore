@@ -3,5 +3,7 @@
 .settings
 .DS_Store
 *.o
+one_thousand_lines
 two_thousand_lines
+four_thousand_lines
 Release
