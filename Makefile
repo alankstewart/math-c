@@ -14,12 +14,19 @@ default: all
 all: math
 
 clean:
-	rm -f two_thousand_lines 
+	rm -f *.o one_thousand_lines two_thousand_lines four_thousand_lines
 
 math:
 	@echo 'Building target: $@'
-	gcc -o two_thousand_lines src/two_thousand_lines.c ${CFLAGS} ${LIBS} 
+	gcc -c src/line_segments.c ${CFLAGS} -o line_segments.o 
+	gcc -c src/main.c ${CFLAGS} -o main.o 
+	gcc line_segments.o main.o src/one_thousand_lines.c  ${CFLAGS} ${LIBS} -o one_thousand_lines 
+	gcc line_segments.o main.o src/two_thousand_lines.c  ${CFLAGS} ${LIBS} -o two_thousand_lines 
+	gcc line_segments.o main.o src/four_thousand_lines.c ${CFLAGS} ${LIBS} -o four_thousand_lines 
 
 run: math
 	@echo Executing ...
-	./two_thousand_lines
+	./one_thousand_lines
+	#./two_thousand_lines
+	#./four_thousand_lines
+	

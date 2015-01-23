@@ -2,6 +2,6 @@
 .project
 .settings
 .DS_Store
-*.out
+*.o
 two_thousand_lines
 Release
