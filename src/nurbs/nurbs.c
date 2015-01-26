@@ -8,7 +8,11 @@
  result is a curved surface that contains all of those points.
  */
 
+#ifdef __APPLE__
 #include <GLUT/glut.h>
+#else
+#include <GL/glut.h>
+#endif
 
 GLfloat mat_color_diffuse[] = { 0.2, 0.6, 1.0, 1.0 };
 GLfloat mat_specular[] = { 1.0, 1.0, 1.0, 1.0 };
