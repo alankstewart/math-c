@@ -1,8 +1,8 @@
 /*  Light1.c   This programs draws a simple Solar system that animates constantly */
 
-#include <math.h>
+#include "solar.h"
 #include <stdlib.h>
-#include <GLUT/glut.h>
+#include <math.h>
 
 void init()
 {
