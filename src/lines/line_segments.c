@@ -38,7 +38,6 @@ void display()
         glVertex2d(line.p1.x, line.p1.y);
         glColor3f(0.0f, 0.1f, 0.3f);
         glVertex2d(line.p2.x, line.p2.y);
-      /*  printf("(%f, %f), (%f, %f)\n", line.p1.x, line.p1.y, line.p2.x, line.p2.y); */
     }
     glEnd();
     glFlush();
