@@ -1,4 +1,4 @@
-/*  Light1.c   This programs draws a simple Solar system that animates constantly */
+/*  solar.c   This programs draws a simple Solar system that animates constantly */
 
 #include "solar.h"
 #include <stdlib.h>
@@ -10,12 +10,12 @@ void init()
     GLfloat mat_shininess[] = { 50.0 };                  // Define shininess of surface
     GLfloat light_position[] = { 10.0, 40.0, 1.0, 0.0 }; // Define light source position
 
-    glClearColor(0.3, 0.3, 0.3, 0.0);                    // Set background to gray
+    glClearColor(0.3, 0.3, 0.3, 0.0);                    // Set background to grey
     glShadeModel(GL_SMOOTH);                             // Smooth transitions between edges
     glMaterialfv(GL_FRONT, GL_SPECULAR, mat_specular);   // Set material properties
     glMaterialfv(GL_FRONT, GL_SHININESS, mat_shininess); // Set material properties
     glLightfv(GL_LIGHT0, GL_POSITION, light_position);   // Set light properties
-    glColorMaterial(GL_FRONT, GL_DIFFUSE);               // Set Color Capability
+    glColorMaterial(GL_FRONT, GL_DIFFUSE);               // Set color capability
 
     glEnable(GL_COLOR_MATERIAL); // Enable color
     glEnable(GL_LIGHTING);       // Enable lighting for surfaces
@@ -42,17 +42,17 @@ void display()
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     glPushMatrix();                // Begin drawing image
     glRotatef(x, 0.0, 1.0, 0.0);   // Rotate
-    glColor3f(1.0, 0.0, 0.0);      // Set Drawing Color to Red
-    glutSolidSphere(0.70, 30, 20); // Draw Sphere(Radius, Slices, Stacks)
+    glColor3f(1.0, 0.0, 0.0);      // Set drawing color to red
+    glutSolidSphere(0.70, 30, 20); // Draw sphere(radius, slices, stacks)
     glPushMatrix();                // Draw orbiting planet
     glTranslatef(1.1, 0.0, -1.0);  // Move away from origin
     glColor3f(1.0, 1.0, 0.0);      // Set color to yellow
-    glutSolidSphere(0.3, 20, 16);  // Draw Sphere
-    glPushMatrix();                // Draw Moon
+    glutSolidSphere(0.3, 20, 16);  // Draw sphere
+    glPushMatrix();                // Draw moon
     glRotatef(x, 0.0, 1.0, 0.0);   // Rotate
     glTranslatef(0.3, 0.0, -0.5);  // Move reference point
-    glColor3f(0.0, 0.0, 1.0);      // Color Blue
-    glutSolidSphere(0.12, 20, 16); // Draw Sphere
+    glColor3f(0.0, 0.0, 1.0);      // Set color to blue
+    glutSolidSphere(0.12, 20, 16); // Draw sphere
     glPopMatrix();                 // Return to former reference
     glPopMatrix();                 // Return to first reference
     glPushMatrix();                // Draw orbiting planet
