@@ -12,7 +12,7 @@ void init()
     GLdouble bottom = fabs(top);
     scale = left;
 
-    glClearColor(0.5f, 0.5f, 0.5f, 1.0f);
+    glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
     gluOrtho2D(left, right, bottom, top);

@@ -8,7 +8,7 @@ int main(int argc, char *argv[])
     int size = argc > 1 ? atoi(argv[1]) : SIZE;
 
     glutInit(&argc, argv);
-    glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB);
+    glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB);
     glutInitWindowSize(size, size);
     glutInitWindowPosition(100, 0);
     glutCreateWindow("Line Art");
