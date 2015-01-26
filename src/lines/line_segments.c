@@ -1,12 +1,10 @@
 /* two_thousand_lines.c by Alan K Stewart */
 
 #include "line_segments.h"
-#include <stdio.h>
-#include <stdlib.h>
 
 double scale;
 
-void init_2d()
+void init()
 {
     GLdouble right = glutGet(GLUT_WINDOW_WIDTH) * -0.5;
     GLdouble left = fabs(right);
@@ -14,7 +12,7 @@ void init_2d()
     GLdouble bottom = fabs(top);
     scale = left;
 
-    glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
+    glClearColor(0.5f, 0.5f, 0.5f, 1.0f);
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
     gluOrtho2D(left, right, bottom, top);
@@ -40,6 +38,7 @@ void display()
         glVertex2d(line.p1.x, line.p1.y);
         glColor3f(0.0f, 0.1f, 0.3f);
         glVertex2d(line.p2.x, line.p2.y);
+      /*  printf("(%f, %f), (%f, %f)\n", line.p1.x, line.p1.y, line.p2.x, line.p2.y); */
     }
     glEnd();
     glFlush();

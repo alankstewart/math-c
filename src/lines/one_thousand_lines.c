@@ -4,17 +4,6 @@
 
 int lines = 1000;
 
-point get_point1(int n);
-point get_point2(int n);
-
-line_segment get_line(int n)
-{
-    line_segment line;
-    line.p1 = get_point1(n);
-    line.p2 = get_point2(n);
-    return line;
-}
-
 point get_point1(int n)
 {
     point p;
@@ -31,3 +20,10 @@ point get_point2(int n)
     return p;
 }
 
+line_segment get_line(int n)
+{
+    line_segment line;
+    line.p1 = get_point1(n);
+    line.p2 = get_point2(n);
+    return line;
+}

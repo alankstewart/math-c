@@ -27,7 +27,7 @@ typedef struct {
     point p2;
 } line_segment;
 
-void init_2d();
+void init();
 void display();
 line_segment get_line(int n);
 
