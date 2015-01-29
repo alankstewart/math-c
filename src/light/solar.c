@@ -42,11 +42,11 @@ void display()
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     glPushMatrix();                // Begin drawing image
     glRotatef(x, 0.0, 1.0, 0.0);   // Rotate
-    glColor3f(1.0, 0.0, 0.0);      // Set drawing color to red
+    glColor3f(1.0, 1.0, 0.0);      // Set drawing color to yellow
     glutSolidSphere(0.70, 30, 20); // Draw sphere(radius, slices, stacks)
     glPushMatrix();                // Draw orbiting planet
     glTranslatef(1.1, 0.0, -1.0);  // Move away from origin
-    glColor3f(1.0, 1.0, 0.0);      // Set color to yellow
+    glColor3f(1.0, 0.0, 0.0);      // Set color to red
     glutSolidSphere(0.3, 20, 16);  // Draw sphere
     glPushMatrix();                // Draw moon
     glRotatef(x, 0.0, 1.0, 0.0);   // Rotate
