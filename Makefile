@@ -9,7 +9,7 @@ ifeq ($(UNAME), Darwin)
 	LIBS = -framework OpenGL -framework GLUT -lm
 endif
 
-default: all
+default: run
 
 all: math
 

@@ -72,7 +72,7 @@ int main(int argc, char *argv[])
     glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH);
     glutInitWindowSize(1024, 1024);
     glutInitWindowPosition(50, 50);
-    glutCreateWindow("Light");
+    glutCreateWindow("Solar System");
     init();
     glutDisplayFunc(display);
     glutReshapeFunc(reshape);
