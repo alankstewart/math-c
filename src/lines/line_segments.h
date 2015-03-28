@@ -17,18 +17,18 @@ static const double PI = 3.14159265358979323846264338327950288L;
 extern int lines;
 extern double scale;
 
-typedef struct {
+typedef struct Point {
     GLdouble x;
     GLdouble y;
-} point;
+} Point;
 
-typedef struct {
-    point p1;
-    point p2;
-} line_segment;
+typedef struct LineSegment {
+    Point p1;
+    Point p2;
+} LineSegment;
 
 void init();
 void display();
-line_segment get_line(int n);
+LineSegment get_line(int n);
 
 #endif

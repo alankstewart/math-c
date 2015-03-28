@@ -21,7 +21,7 @@ void init()
 void display()
 {
     int n;
-    line_segment line;
+    LineSegment line;
 
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
