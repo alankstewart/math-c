@@ -1,4 +1,4 @@
-CFLAGS = -O3 -Wall -Wno-deprecated-declarations -std=c90 -pedantic
+CFLAGS = -O3 -Wall -Wno-deprecated-declarations -std=c99 -pedantic
 
 UNAME := $(shell uname)
 
@@ -18,7 +18,9 @@ clean:
 
 math: clean
 	@echo 'Building target: $@'
-	
+
+	gcc src/fibonacci.c ${CFLAGS} -o fibonacci
+
 	gcc -c src/lines/line_segments.c ${CFLAGS} -o line_segments.o 
 	gcc -c src/lines/main.c ${CFLAGS} -o main.o 
 	gcc line_segments.o main.o src/lines/one_thousand_lines.c  ${CFLAGS} ${LIBS} -o one_thousand_lines 
@@ -27,7 +29,7 @@ math: clean
 	
 	gcc src/nurbs/nurbs.c ${CFLAGS} ${LIBS} -o nurbs
 	
-	gcc src/light/solar.c ${CFLAGS} ${LIBS} -std=c99 -o solar
+	gcc src/light/solar.c ${CFLAGS} ${LIBS} -o solar
 
 run: math
 	@echo Executing ...
@@ -35,5 +37,6 @@ run: math
 	#./two_thousand_lines
 	#./four_thousand_lines
 	#./nurbs
-	./solar
+	#./solar
+	./fibonacci
 	
