@@ -1,4 +1,4 @@
-CFLAGS = -O3 -Wall -Wno-deprecated-declarations -std=c99 -pedantic
+CFLAGS = -O3 -Wall -Wno-deprecated-declarations -std=c11 -pedantic
 
 UNAME := $(shell uname)
 
@@ -14,7 +14,7 @@ default: run
 all: math
 
 clean:
-	rm -f *.o nurbs solar one_thousand_lines two_thousand_lines four_thousand_lines
+	rm -f *.o nurbs solar one_thousand_lines two_thousand_lines four_thousand_lines fibonacci
 
 math: clean
 	@echo 'Building target: $@'

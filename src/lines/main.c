@@ -1,4 +1,4 @@
-/* two_thousand_lines.c by Alan K Stewart */
+/* main.c by Alan K Stewart */
 
 #include "line_segments.h"
 #include <stdlib.h>
